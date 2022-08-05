@@ -1,0 +1,48 @@
+HTML:
+//create the table in HTML
+// add h1 - conentration game
+//add game board: <div> 8 by 8 cells 
+//add button: restart game;
+  // when won, show it together with the time spend message
+//add countdown
+  // to record time spend on the game
+  // when solved, record time spent and show it
+
+
+CSS:
+// use display grid to seperate the game into three sections:
+  // 1st section: the h1 tag (on the top)
+  // 2nd section: the game board (bottom left)
+  // 3rd section: the countdown and restart button
+
+-----------------------------------
+|               1st               |
+-----------------------------------
+|                        |        |
+|                        |        |
+|                        |        |
+|          2nd           |  3rd   |
+|                        |        |
+|                        |        |
+|                        |        |
+-----------------------------------
+
+
+JS:
+const section:
+
+
+
+function section:
+
+//render board
+
+
+//determind winner
+
+//retart game
+ //initialize board
+    //create a new board (random game)
+ //initialize countdown
+ //initialize
+
