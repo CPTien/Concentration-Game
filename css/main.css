@@ -1,0 +1,86 @@
+* {
+  margin: 0px;
+  padding: 0px;
+
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: none;
+  grid-auto-rows: minmax(150px, auto);
+  /* height: 900px; */
+  width: 900px;
+  font-family: Helvetica;
+  text-align: center;
+}
+
+h1 {
+  grid-column:  1/8;
+  grid-row: 1;
+  text-align: left;
+  margin: 20px 0px 10px 50px;
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 30px
+}
+
+.con {
+  margin: auto;
+  font-size: 55px;
+}
+
+.sideBar {
+  grid-column:  5 / 8;
+  grid-row: 2 / 5;
+  border: 2px solid;
+  border-radius: 4px;
+  margin: 0px 0px 0px 10px;
+}
+
+#instruction {
+  background-color: red;
+  margin: auto;
+}
+
+.timer {
+  background-color: green;
+  margin: auto;
+}
+
+#replayBtn {
+  background-color: blue;
+  margin: auto;
+} 
+
+
+
+#gameboard {
+  grid-column:  1 / 5;
+  grid-row: 2 / 5;
+  display: flex;
+  flex-wrap: wrap;
+  width: 565px;
+  margin-left: 50px;
+  cursor: pointer;
+  align-items: center;
+  border: 2px solid;
+  border-radius: 4px;
+}
+
+
+.cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  color: black;
+  font-size: 50px;
+  border: 2px solid;
+  margin: 5px;
+  border-radius: 4px;
+  border-color: blue;
+  background-color: blue;
+}
+
