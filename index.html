@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Concentration Game</title>
+    <script src="https://kit.fontawesome.com/0a825f7689.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
     <script defer src="js/main.js"></script>
 </head>
@@ -14,47 +15,159 @@
             <div class = con>Concentration Game</div>
         </h1>
         <div class = "sideBar">
-          <button id="instruction">How to play</button>
-          <div class = "timer">timer</div>
-          <button id="replayBtn">Play Again</button>
+          <div id="instruction">Find the image pair as soon as possible</div>
+          <div class = "timer">
+            <i class="fa-solid fa-hourglass"></i>timer
+          </div>
+          <button id="replayBtn">
+            <i class="fa-solid fa-arrows-rotate"></i>Play Again!
+          </button>
         </div>
         <div id="gameboard">
-            <div class="cell" id="0"></div>
-            <div class="cell" id="1"></div>
-            <div class="cell" id="2"></div>
-            <div class="cell" id="3"></div>
-            <div class="cell" id="4"></div>
-            <div class="cell" id="5"></div>
-            <div class="cell" id="6"></div>
-            <div class="cell" id="7"></div>
-            <div class="cell" id="8"></div>
-            <div class="cell" id="9"></div>
-            <div class="cell" id="10"></div>
-            <div class="cell" id="11"></div>
-            <div class="cell" id="12"></div>
-            <div class="cell" id="13"></div>
-            <div class="cell" id="14"></div>
-            <div class="cell" id="15"></div>
-            <div class="cell" id="16"></div>
-            <div class="cell" id="17"></div>
-            <div class="cell" id="18"></div>
-            <div class="cell" id="19"></div>
-            <div class="cell" id="20"></div>
-            <div class="cell" id="21"></div>
-            <div class="cell" id="22"></div>
-            <div class="cell" id="23"></div>
-            <div class="cell" id="24"></div>
-            <div class="cell" id="25"></div>
-            <div class="cell" id="26"></div>
-            <div class="cell" id="27"></div>
-            <div class="cell" id="28"></div>
-            <div class="cell" id="29"></div>
-            <div class="cell" id="30"></div>
-            <div class="cell" id="31"></div>
-            <div class="cell" id="32"></div>
-            <div class="cell" id="33"></div>
-            <div class="cell" id="34"></div>
-            <div class="cell" id="35"></div>
+            <div class="cell" id="0">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-bugs"></i>
+            </div>
+            <div class="cell" id="1">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-bugs"></i>
+            </div>
+            <div class="cell" id="2">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-cat"></i>
+            </div>
+            <div class="cell" id="3">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-cat"></i>
+            </div>
+            <div class="cell" id="4">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-cow"></i>
+            </div>
+            <div class="cell" id="5">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-cow"></i>
+            </div>
+            <div class="cell" id="6">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-crow"></i>
+            </div>
+            <div class="cell" id="7">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-crow"></i>
+            </div>
+            <div class="cell" id="8">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-dog"></i>
+            </div>
+            <div class="cell" id="9">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-dog"></i>
+            </div>
+            <div class="cell" id="10">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-dragon"></i>
+            </div>
+            <div class="cell" id="11">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-dragon"></i>
+            </div>
+            <div class="cell" id="12">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-fish-fins"></i>
+            </div>
+            <div class="cell" id="13">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-fish-fins"></i>
+            </div>
+            <div class="cell" id="14">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-frog"></i>
+            </div>
+            <div class="cell" id="15">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-frog"></i>
+            </div>
+            <div class="cell" id="16">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-hippo"></i>
+            </div>
+            <div class="cell" id="17">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-hippo"></i>
+            </div>
+            <div class="cell" id="18">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-horse"></i>
+            </div>
+            <div class="cell" id="19">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-horse"></i>
+            </div>
+            <div class="cell" id="20">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-kiwi-bird"></i>
+            </div>
+            <div class="cell" id="21">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-kiwi-bird"></i>
+            </div>
+            <div class="cell" id="22">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-locust"></i>
+            </div>
+            <div class="cell" id="23">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-locust"></i>
+            </div>
+            <div class="cell" id="24">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-mosquito"></i>
+            </div>
+            <div class="cell" id="25">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-mosquito"></i>
+            </div>
+            <div class="cell" id="26">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-otter"></i>
+            </div>
+            <div class="cell" id="27">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-otter"></i>
+            </div>
+            <div class="cell" id="28">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-paw"></i>
+            </div>
+            <div class="cell" id="29">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-paw"></i>
+            </div>
+            <div class="cell" id="30">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-shrimp"></i>
+            </div>
+            <div class="cell" id="31">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-shrimp"></i>
+            </div>
+            <div class="cell" id="32">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-spider"></i>
+            </div>
+            <div class="cell" id="33">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-spider"></i>
+            </div>
+            <div class="cell" id="34">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-worm"></i>
+            </div>
+            <div class="cell" id="35">
+                <i class="front-side fa-solid fa-yin-yang"></i>
+                <i class="back-side fa-solid fa-worm"></i>
+            </div>
         </div>
     </div>
 </body>
