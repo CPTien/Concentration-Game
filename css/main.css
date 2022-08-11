@@ -1,7 +1,6 @@
 * {
-  margin: 0px;
   padding: 0px;
-  background-color: grey;
+  margin: auto;
 }
 
 .container {
@@ -9,7 +8,6 @@
   grid-template-columns: repeat(7, 1fr);
   gap: none;
   grid-auto-rows: minmax(150px, auto);
-  /* height: 900px; */
   width: 900px;
   font-family: Helvetica;
   text-align: center;
@@ -19,13 +17,13 @@ h1 {
   grid-column:  1/8;
   grid-row: 1;
   text-align: left;
-  margin: 20px 0px 10px 50px;
+  margin: 20px 50px 10px 50px;
   border: 2px solid;
   border-radius: 4px;
   padding: 30px
 }
 
-.con {
+.title {
   margin: auto;
   font-size: 55px;
 }
@@ -35,39 +33,53 @@ h1 {
   grid-row: 2 / 5;
   border: 2px solid;
   border-radius: 4px;
-  margin: 0px 0px 0px 10px;
+  margin: 10px 50px 20px 20px;
 }
 
 #instruction {
-  background-color: red;
-  margin: auto;
+  margin: 80px 0px 50px 0px;
+  font-size: 25px;
+}
+
+.timer-container {
+	color: #000;
+	margin: 70px 0px 140px 0px;
 }
 
 .timer {
-  background-color: green;
-  margin: auto;
+  font-size: 25px;
 }
 
 #replayBtn {
-  background-color: blue;
-  margin: auto;
+  border-radius: 4px;
+  border: 2px solid;
+  margin: 15px auto;
+  font-size: 25px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
 } 
 
+#replayBtn:hover {
+color: green;
+background-color: aqua;
+} 
 
-
-#gameboard {
+#gameBoard {
   grid-column:  1 / 5;
   grid-row: 2 / 5;
   display: flex;
   flex-wrap: wrap;
   width: 565px;
+  margin-top: 10px;
   margin-left: 50px;
+  margin-bottom: 20px;
   cursor: pointer;
   align-items: center;
   border: 2px solid;
   border-radius: 4px;
 }
-
 
 .cell {
   display: flex;
@@ -80,40 +92,43 @@ h1 {
   border: 2px solid;
   margin: 5px;
   border-radius: 4px;
-  border-color: blue;
+  border-color: black;
   background-color: none;
-  transition: all 0.5s;
+  transform: scale(1);
   transform-style: preserve-3d;
+  transition: transform 0.5s;
 }
 
-
-.front-side
-.back-side {
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  position: absolute;
-  border-radius: 5px;
-  background: #1C7CCC;
-  backface-visibility: hidden;
+.cell:active {
+  transform: scale(1);
+  transition: transform 0.2s;
 }
 
-.front-side {
+.cell.flip {
   transform: rotateY(180deg);
 }
 
-.back-side {
-  color: purple;
-  font-size: 50px;
-}
-
 .front-side {
-  color: purple;
-  font-size: 50px;
+  font-size: 45px;
 }
 
 .front-side:hover {
-  color: green;
-  font-size: 50px;
+  color: rgb(197, 17, 17);
+  font-size: 45px;
 }
+
+
+.back-side,
+.front-side {
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+.back-side {
+  transform: rotateY(180deg);
+  color: red;
+  font-size: 45px;
+}
+
 

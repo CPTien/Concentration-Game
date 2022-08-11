@@ -12,163 +12,164 @@
 <body>
     <div class="container">
         <h1>
-            <div class = con>Concentration Game</div>
+            <div class = title>Concentration Game</div>
         </h1>
         <div class = "sideBar">
-          <div id="instruction">Find the image pair as soon as possible</div>
-          <div class = "timer">
-            <i class="fa-solid fa-hourglass"></i>timer
+          <div id="instruction">Find the image pair</div>
+          <div class = "timer-container">
+            <span class="timer"><i class="fa-solid fa-hourglass"></i>&nbsp;Time: 00:00</span>
           </div>
           <button id="replayBtn">
-            <i class="fa-solid fa-arrows-rotate"></i>Play Again!
+            <i class="fa-solid fa-arrows-rotate"></i>&nbsp;&nbsp;Play Again
           </button>
         </div>
-        <div id="gameboard">
-            <div class="cell" id="0">
+        <section id="gameBoard">
+            <div class="cell" id="0" data-image = "1">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-bugs"></i>
             </div>
-            <div class="cell" id="1">
+            <div class="cell" id="0" data-image = "1">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-bugs"></i>
             </div>
-            <div class="cell" id="2">
+            <div class="cell" id="1" data-image = "2">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-cat"></i>
             </div>
-            <div class="cell" id="3">
+            <div class="cell" id="1" data-image = "2">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-cat"></i>
             </div>
-            <div class="cell" id="4">
+            <div class="cell" id="2" data-image = "3">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-cow"></i>
             </div>
-            <div class="cell" id="5">
+            <div class="cell" id="2" data-image = "3">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-cow"></i>
             </div>
-            <div class="cell" id="6">
+            <div class="cell" id="3" data-image = "4">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-crow"></i>
             </div>
-            <div class="cell" id="7">
+            <div class="cell" id="3" data-image = "4">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-crow"></i>
             </div>
-            <div class="cell" id="8">
+            <div class="cell" id="4" data-image = "5">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-dog"></i>
             </div>
-            <div class="cell" id="9">
+            <div class="cell" id="4" data-image = "5">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-dog"></i>
             </div>
-            <div class="cell" id="10">
+            <div class="cell" id="5" data-image = "6">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-dragon"></i>
             </div>
-            <div class="cell" id="11">
+            <div class="cell" id="5" data-image = "6">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-dragon"></i>
             </div>
-            <div class="cell" id="12">
+            <div class="cell" id="6" data-image = "7">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-fish-fins"></i>
             </div>
-            <div class="cell" id="13">
+            <div class="cell" id="6" data-image = "7">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-fish-fins"></i>
             </div>
-            <div class="cell" id="14">
+            <div class="cell" id="7" data-image = "8">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-frog"></i>
             </div>
-            <div class="cell" id="15">
+            <div class="cell" id="7" data-image = "8">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-frog"></i>
             </div>
-            <div class="cell" id="16">
+            <div class="cell" id="8" data-image = "9">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-hippo"></i>
             </div>
-            <div class="cell" id="17">
+            <div class="cell" id="8" data-image = "9">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-hippo"></i>
             </div>
-            <div class="cell" id="18">
+            <div class="cell" id="9" data-image = "10">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-horse"></i>
             </div>
-            <div class="cell" id="19">
+            <div class="cell" id="9" data-image = "10">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-horse"></i>
             </div>
-            <div class="cell" id="20">
+            <div class="cell" id="10" data-image = "11">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-kiwi-bird"></i>
             </div>
-            <div class="cell" id="21">
+            <div class="cell" id="10" data-image = "11">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-kiwi-bird"></i>
             </div>
-            <div class="cell" id="22">
+            <div class="cell" id="11" data-image = "12">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-locust"></i>
             </div>
-            <div class="cell" id="23">
+            <div class="cell" id="11" data-image = "12">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-locust"></i>
             </div>
-            <div class="cell" id="24">
+            <div class="cell" id="12" data-image = "13">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-mosquito"></i>
             </div>
-            <div class="cell" id="25">
+            <div class="cell" id="12" data-image = "13">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-mosquito"></i>
             </div>
-            <div class="cell" id="26">
+            <div class="cell" id="13" data-image = "14">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-otter"></i>
             </div>
-            <div class="cell" id="27">
+            <div class="cell" id="13" data-image = "14">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-otter"></i>
             </div>
-            <div class="cell" id="28">
+            <div class="cell" id="14" data-image = "15">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-paw"></i>
             </div>
-            <div class="cell" id="29">
+            <div class="cell" id="14" data-image = "15">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-paw"></i>
             </div>
-            <div class="cell" id="30">
+            <div class="cell" id="15" data-image = "16">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-shrimp"></i>
             </div>
-            <div class="cell" id="31">
+            <div class="cell" id="15" data-image = "16">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-shrimp"></i>
             </div>
-            <div class="cell" id="32">
+            <div class="cell" id="16" data-image = "17">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-spider"></i>
             </div>
-            <div class="cell" id="33">
+            <div class="cell" id="16" data-image = "17">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-spider"></i>
             </div>
-            <div class="cell" id="34">
+            <div class="cell" id="17" data-image = "18">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-worm"></i>
             </div>
-            <div class="cell" id="35">
+            <div class="cell" id="17" data-image = "18">
                 <i class="front-side fa-solid fa-yin-yang"></i>
                 <i class="back-side fa-solid fa-worm"></i>
             </div>
-        </div>
+            
+        </section>
     </div>
 </body>
 </html>
