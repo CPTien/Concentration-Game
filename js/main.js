@@ -32,6 +32,12 @@ let time = null;
 let minutes = 0;
 let seconds = 0;
 let timeStart = false;
+let showTime = null;
+
+//reference: <https://stackoverflow.com/questions/8043026/how-to-format-numbers-by-prepending-0-to-single-digit-numbers/31466357#31466357>
+showTime = setInterval(function() {
+  timeCounter.innerHTML = (`<i class="fa-solid fa-hourglass"></i>  ` +`Time: ` + (minutes).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + `:` + (seconds).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
+},1000);
 
 function timer() {
 	// 1 count per second, after 60 seconds, convert to 1 min
@@ -41,20 +47,17 @@ function timer() {
 				minutes++;
 				seconds = 0;
 		}
-		// update html timer section
-		timeCounter.innerHTML = (`<i class="fa-solid fa-hourglass"></i>  ` +`Time: ` + minutes + ` : ` + seconds);
 	}, 1000);
-}
+};
 
 function stopTimer() {
 	clearInterval(time);
-}
+};
 
 // player moves 
 // add click to all of the cells
 cards.forEach(card => card.addEventListener('click', makeMove));
 
-let firstMoveState=[];//<<<<-----------------------------------------------------------to remove?
 function makeMove() {
   //timer starts when click on the first card
   if (timeStart === false) {
@@ -63,7 +66,7 @@ function makeMove() {
   };
 
   if (lockedBoard === true) return;
-  if (this === firstMove) return; //Rondell's help
+  if (this === firstMove) return; 
   this.classList.add('flip');
 // if the card has not been selected, make it the first move
   if (hasFlippedCard === false) {
@@ -105,8 +108,6 @@ function resetBoard() {
   secondMove = null;
 }
 
-
-
 //win condition function
 function winCondition() {
   if (winConditionCount == 18) { //<<-------------------------------------------------------to change to 18<<<<<<<
@@ -116,7 +117,6 @@ function winCondition() {
   }
 }
 
-
 // restart game button functions 
 replayBtn.addEventListener('click', replay)
 
@@ -125,17 +125,19 @@ function replay() {
   lockedBoard = false;
   firstMove = null; 
   secondMove = null;
+  winConditionCount = 0;
   // shuffle the cards
   replayBtn.innerHTML = '<i class="fa-solid fa-arrows-rotate">&nbsp;&nbsp;</i>Play Again';
   winningMsg.innerHTML = 'Find the image pair';
   //clear time;
+  timeStart = false;
+  seconds = 0;
   minutes = 0;
-  seconds = -1;
-  // firstMoveState[firstMoveState.length -1].classList.remove('flip');
-  cards.forEach(card => card.classList.remove('flip')); //---------------------------------------------<<<<<
-
+  stopTimer();
+  cards.forEach(card => card.classList.remove('flip')); 
+  cards.forEach(card => card.addEventListener('click', makeMove));
   shuffle();
-  return null;//---------------------------------------------<<<<<
+  return null;
 }
 
 
