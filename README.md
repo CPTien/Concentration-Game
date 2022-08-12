@@ -1,10 +1,6 @@
 #  Concentration Game
 
-<<<<<<< HEAD
-How to play: Find the image pairs. Click, Memorize,and Enjoy! :octocat:
-=======
 How to play: Click, Memorize, Enjoy! :octocat:
->>>>>>> 562eed9761d3a72f4def568b850700c1fd418865
 
 
 ---
