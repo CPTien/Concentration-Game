@@ -60,7 +60,7 @@ function makeMove() {
   if (lockedBoard === true) return;
   if (this === firstMove) return; 
   this.classList.add('flip');
-// if the card has not been selected, make it the first move
+  // if the card has not been selected, make it the first move
   if (hasFlippedCard === false) {
     hasFlippedCard = true;
     firstMove = this;
@@ -119,7 +119,7 @@ function replay() {
   //restart win condition count
   winConditionCount = 0;
   // shuffle the cards
-  replayBtn.innerHTML = 'Reply';
+  replayBtn.innerHTML = 'Replay';
   winningMsg.innerHTML = 'Find all of the image pairs!!';
   //clear time;
   timeStart = false;
