@@ -102,7 +102,7 @@ function resetBoard() {
 //win condition function
 function winCondition() {
   if (winConditionCount == 18) { 
-    winningMsg.innerHTML = "Congrats! You Won!<br><br>";
+    winningMsg.innerHTML = "Congrats! You Won! Play again?";
     replayBtn.innerHTML = "Again?";
     stopTimer();
   }
