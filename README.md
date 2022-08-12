@@ -1,6 +1,10 @@
 #  Concentration Game
 
+<<<<<<< HEAD
 How to play: Find the image pairs. Click, Memorize,and Enjoy! :octocat:
+=======
+How to play: Click, Memorize, Enjoy! :octocat:
+>>>>>>> 562eed9761d3a72f4def568b850700c1fd418865
 
 
 ---
@@ -33,7 +37,22 @@ How to play: Find the image pairs. Click, Memorize,and Enjoy! :octocat:
 
 
 ---
-## Next Steps/Icebox items:
+## What went well
+
+- Getting better at searching for help online
+- Learn from my mistakes
+- Not afraid asking for help
+- Thinking out loud
+
+
+---
+## Hurdles
+
+Was stuck on the replay function for hours, I was unable to figure it out so I went to bed (got up the next day and solved it in 10 mins...)
+
+
+---
+## Future features/Icebox items:
 
 - create function that will give you the scores (1-5, 5 being the best). 
     - 5 stars If the player can solve the game within 30 steps. 
