@@ -2,30 +2,23 @@ const cards = document.querySelectorAll('.cell');
 const replayBtn = document.getElementById("replayBtn");
 const timeCounter = document.querySelector(".timer");
 const winningMsg = document.getElementById("instruction");
-console.log(cards);
-console.log(replayBtn);
-console.log(timeCounter);
-console.log(winningMsg)
 
 let hasFlippedCard = false;
 let lockedBoard = false;
 let firstMove = null; 
 let secondMove = null;
 let winConditionCount = 0; 
-// game logic----------------------------------------------------------------
 
 // before game start, shuffle the cards first
 shuffle();
 
 // to generate cards at random position
-// // disable first - to uncomment later
 function shuffle() {
   cards.forEach(card => {
     let randomCell = Math.floor(Math.random() * 36);
     card.style.order = randomCell;
   });
 };
-
 
 //timer functions
 let time = null;
@@ -34,9 +27,9 @@ let seconds = 0;
 let timeStart = false;
 let showTime = null;
 
-//reference: <https://stackoverflow.com/questions/8043026/how-to-format-numbers-by-prepending-0-to-single-digit-numbers/31466357#31466357>
+//timer format reference: <https://stackoverflow.com/questions/8043026/how-to-format-numbers-by-prepending-0-to-single-digit-numbers/31466357#31466357>
 showTime = setInterval(function() {
-  timeCounter.innerHTML = (`<i class="fa-solid fa-hourglass"></i>  ` +`Time: ` + (minutes).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + `:` + (seconds).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
+  timeCounter.innerHTML = (`<i class="fa-solid fa-hourglass"></i>Time<br>` + (minutes).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}) + `-` + (seconds).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false}));
 },1000);
 
 function timer() {
@@ -54,8 +47,7 @@ function stopTimer() {
 	clearInterval(time);
 };
 
-// player moves 
-// add click to all of the cells
+// player moves: add click to all of the cells
 cards.forEach(card => card.addEventListener('click', makeMove));
 
 function makeMove() {
@@ -86,7 +78,6 @@ function checkPairs() {
     firstMove.removeEventListener('click', makeMove);
     secondMove.removeEventListener('click', makeMove);
     winConditionCount++;
-
     winCondition();
     resetBoard();
   } else {
@@ -110,9 +101,9 @@ function resetBoard() {
 
 //win condition function
 function winCondition() {
-  if (winConditionCount == 18) { //<<-------------------------------------------------------to change to 18<<<<<<<
+  if (winConditionCount == 18) { 
     winningMsg.innerHTML = "Congrats! You Won!";
-    replayBtn.innerHTML = "Another One?";
+    replayBtn.innerHTML = "Again?";
     stopTimer();
   }
 }
@@ -125,17 +116,20 @@ function replay() {
   lockedBoard = false;
   firstMove = null; 
   secondMove = null;
+  //restart win condition count
   winConditionCount = 0;
   // shuffle the cards
-  replayBtn.innerHTML = '<i class="fa-solid fa-arrows-rotate">&nbsp;&nbsp;</i>Play Again';
-  winningMsg.innerHTML = 'Find the image pair';
+  replayBtn.innerHTML = 'Reply';
+  winningMsg.innerHTML = 'Find all of the image pairs!!';
   //clear time;
   timeStart = false;
   seconds = 0;
   minutes = 0;
   stopTimer();
+  //make all the cards clickable and to face-down position
   cards.forEach(card => card.classList.remove('flip')); 
   cards.forEach(card => card.addEventListener('click', makeMove));
+  //generate random position
   shuffle();
   return null;
 }

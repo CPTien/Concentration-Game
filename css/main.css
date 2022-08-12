@@ -1,6 +1,7 @@
 * {
   padding: 0px;
   margin: auto;
+  font-family: Silkscreen, Monaco, Helvetica;
 }
 
 .container {
@@ -9,7 +10,6 @@
   gap: none;
   grid-auto-rows: minmax(150px, auto);
   width: 900px;
-  font-family: Helvetica;
   text-align: center;
 }
 
@@ -17,28 +17,32 @@ h1 {
   grid-column:  1/8;
   grid-row: 1;
   text-align: left;
-  margin: 90px 50px 10px 50px;
-  border: 2px solid;
-  border-radius: 4px;
+  margin: 80px 50px 10px 50px;
+  border: 6px dashed;
+  border-radius: 7px;
   padding: 30px
 }
 
 .title {
-  margin: auto;
-  font-size: 55px;
+  font-size: 50px;
+}
+
+.face {
+  color: red;
 }
 
 .sideBar {
   grid-column:  5 / 8;
   grid-row: 2 / 5;
-  border: 2px solid;
-  border-radius: 4px;
-  margin: 10px 50px 20px 20px;
+  border: 6px dashed;
+  border-radius: 8px;
+  margin: 10px 50px 80px 20px;
 }
 
 #instruction {
-  margin: 60px 10px 100px 10px;
-  font-size: 25px;
+  margin: 0px 10px 105px 10px;
+  font-size: 28px;
+  text-align: left;
 }
 
 .timer-container {
@@ -47,14 +51,14 @@ h1 {
 }
 
 .timer {
-  font-size: 25px;
+  font-size: 28px;
 }
 
 #replayBtn {
   border-radius: 10px;
-  border: 5px solid;
-  margin: 40px 12px 10px 12px;
-  font-size: 22px;
+  border: 2px solid;
+  margin: 65px 12px 25px 12px;
+  font-size: 28px;
   background-color: black;
   color: white;
   padding: 8px;
@@ -62,9 +66,9 @@ h1 {
 } 
 
 #replayBtn:hover {
-  background-color: white;
+  background-color: red;
   color: black;
-  border-color: white;
+  border-color: red;
 } 
 
 #gameBoard {
@@ -73,40 +77,39 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: 565px;
-  margin-top: 10px;
-  margin-left: 50px;
-  margin-bottom: 20px;
+  margin: 10px 10px 80px 50px;
   cursor: pointer;
   align-items: center;
-  border: 2px solid;
-  border-radius: 4px;
+  border: 6px dashed;
+  border-radius: 8px;
 }
 
 .cell {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  width: 80px;
-  color: black;
-  font-size: 50px;
-  border: 2px solid;
+  height: 90px;
+  width: 72px;
+  color: white;
+  border: 6px dashed;
   margin: 5px;
-  border-radius: 4px;
+  border-radius: 8px;
   border-color: black;
-  background-color: none;
+  background-color: white;
   transform: scale(1);
   transform-style: preserve-3d;
-  transition: transform 0.5s;
+  transition: transform 0.6s;
 }
 
 .cell:active {
   transform: scale(1);
-  transition: transform 0.2s;
+  transition: transform 0.3s;
 }
 
 .cell.flip {
   transform: rotateY(180deg);
+  background-color: white;
+  color: black;
 }
 
 .front-side {
@@ -114,10 +117,8 @@ h1 {
 }
 
 .front-side:hover {
-  color: rgb(92, 82, 82);
-  font-size: 45px;
+  color:red;
 }
-
 
 .back-side,
 .front-side {
@@ -128,7 +129,7 @@ h1 {
 
 .back-side {
   transform: rotateY(180deg);
-  color: grey;
+  color: black;
   font-size: 45px;
 }
 
